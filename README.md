@@ -4,8 +4,8 @@
 
 O teste consiste em fazer uma aplicação onde o usuário possa criar categorias e produtos.
 
-- 1º - CRUD de categoria "categories" -> (id, name, created, updated)
-- 2º - CRUD de produto vinculando uma categoria "products" -> (id, category_id, name, created, updated).
+- 1º - CRUD de categoria "categories" -> (id, name, created, updated);
+- 2º - CRUD de produto vinculando uma categoria "products" -> (id, category_id, name, created, updated);
 
 OBS:
 - Deve ser feito em php puro 'sem framework';
@@ -16,11 +16,11 @@ OBS:
 
 ## Forma de envio
 
-- Fazer fork do projeto
-- Criar um branch com o seguinte nome "teste_php_NOME_SOBRENOME"
-- Fazer pull request para o branch "teste_php" do projeto de origem
+- Fazer fork do projeto;
+- Criar um branch com o seguinte nome "teste_php_NOME_SOBRENOME";
+- Fazer pull request para o branch "teste_php" do projeto de origem;
 
 ## Diferenciais
-- Seguir as PSR's
-- Utilizar composer
-- Teste unitário
+- Seguir as PSR's;
+- Utilizar composer;
+- Teste unitário;
