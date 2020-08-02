@@ -1,4 +1,4 @@
-# Teste PHP
+﻿# Teste PHP
 
 ## O que deve ser feito
 
@@ -24,3 +24,7 @@ OBS:
 - Seguir as PSR's;
 - Utilizar composer;
 - Teste unitário;
+======================================================================
+1º Criar o banco (teste_sodresantoro) no Mysql "usuário= root, sem senha";
+2º Dentro da Pasta MySQL possui um script para criar as tabelas, ou pode ser criada pela propria aplicação, na tela inicial;
+3º Todo Projeto esta na mesmo diretório, incluindo CSS e IMG(imagem);
