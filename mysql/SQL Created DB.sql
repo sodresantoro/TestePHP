@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `sodresantoro`.`categories` (
   `created` INT NOT NULL,
   `updated` INT NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC))
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -37,13 +37,13 @@ CREATE TABLE IF NOT EXISTS `sodresantoro`.`products` (
   `created` INT NOT NULL,
   `updated` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_products_categories_idx` (`categories_id` ASC) ,
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) ,
+  INDEX `fk_products_categories_idx` (`categories_id` ASC) VISIBLE,
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE,
   CONSTRAINT `fk_products_categories`
     FOREIGN KEY (`categories_id`)
     REFERENCES `sodresantoro`.`categories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 

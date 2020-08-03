@@ -1,0 +1,13 @@
+{
+    "name": "celso/teste-php",
+    "description": "php_test",
+    "authors": [
+        {
+            "name": "celsobastos",
+            "email": "33303003+celsobastos@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.7.0"
+    }
+}
