@@ -30,4 +30,4 @@ OBS:
 - No apache ;
 - Mysql version 5.7.23;
 - PHP version 7.2.10 não foi instalado nenhuma extensão adicional;
-Composer version 1.10.7 >> Foi implementado o pacote "Monolog\Logger" em algumas paginas para gerarção de logs, pacote usado: "https://packagist.org/packages/monolog/monolog".
+- Composer version 1.10.7 >> Foi implementado o pacote "Monolog\Logger" em algumas paginas para gerarção de logs, pacote usado: "https://packagist.org/packages/monolog/monolog".
