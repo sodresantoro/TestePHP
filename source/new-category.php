@@ -1,29 +1,29 @@
 
 <?php 
     
-    spl_autoload_register(function ($className) {
-        require_once ('../classes/' . $className . '.class.php');
-    });
-  
-    use Database as db;
-    use Categories as cat;
+spl_autoload_register(function ($className) {
+    require_once ('../classes/' . $className . '.class.php');
+});
+
+use Database as db;
+use Categories as cat;
+
+$actionForm = "create-category.php";
+$valueButton = "Send";
+$section = "New Category";   
+
+if (isset($_GET["id"]) && !empty($_GET["id"])){
     
-    $actionForm = "create-category.php";
-    $valueButton = "Send";
-    $section = "New Category";   
+    $db = new db();
+    $conn = $db->getConnection();
+    $cat = new Categories($conn);
+    $result = $cat->getCategory($_GET["id"]);
+    $stmt = $result->fetch_assoc();
+    $actionForm = "update-category.php";
+    $valueButton = "Update";
+    $section = "Update Category";
 
-    if (isset($_GET["id"]) && !empty($_GET["id"])){
-        
-        $db = new db();
-        $conn = $db->getConnection();
-        $cat = new Categories($conn);
-        $result = $cat->getCategory($_GET["id"]);
-        $stmt = $result->fetch_assoc();
-        $actionForm = "update-category.php";
-        $valueButton = "Update";
-        $section = "Update Category";
-
-    }    
+}    
 
 ?>
 <!DOCTYPE html>

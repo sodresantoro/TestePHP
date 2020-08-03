@@ -1,16 +1,16 @@
 <?php
-    spl_autoload_register(function ($className) {
-        require_once ('../classes/' . $className . '.class.php');
-    });
+spl_autoload_register(function ($className) {
+    require_once ('../classes/' . $className . '.class.php');
+});
 
-    use Database as db;
-    use Categories as cat;
-    use Products as prod;
+use Database as db;
+use Categories as cat;
+use Products as prod;
 
-    $db = new db();
-    $conn = $db->getConnection();
-    $prod = new Products($conn);
-    $stmt = $prod->getProducts();
+$db = new db();
+$conn = $db->getConnection();
+$prod = new Products($conn);
+$stmt = $prod->getProducts();
 ?>
 
 <!DOCTYPE html>

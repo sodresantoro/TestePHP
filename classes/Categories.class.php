@@ -55,7 +55,6 @@
             $stmt->close();
         } 
 
-
         //UPDATE
         public function updateCategory(){
            $stmt = mysqli_prepare($this->conn, "UPDATE " . $this->db_table . "  SET name = ?, 
@@ -77,7 +76,6 @@
             $this->id = (int) $this->id;
             $stmt = mysqli_prepare($this->conn, "DELETE FROM " . $this->db_table . " WHERE id = ?");
             mysqli_stmt_bind_param($stmt, 'i', $this->id);
-            //$this->id = (int)strip_tags($this->id);
 
             // execute prepared statement
             mysqli_stmt_execute($stmt);

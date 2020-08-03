@@ -33,11 +33,8 @@ class Database {
             echo 'ERROR:'.$e->getMessage();
         }
         
-
         return $this->conn;
-
     }
 }  
-
 
 ?>

@@ -18,7 +18,6 @@
             $this->conn = $db;
         }
 
-
         // READ ALL
         public function getProducts($id = null){
             
@@ -36,7 +35,6 @@
                 $result = $this->conn->query($sql); 
             }
 
-            //$result = $stmt->get_result();
             $this->conn->close();
             return  $result ;
             
@@ -48,8 +46,7 @@
                         . "LEFT JOIN " . $this->db_table . "  p ON c.id = p.categories_id "
                         . "ORDER BY id DESC limit 100";
 
-                $result = $this->conn->query($sql);	
-            //$result = $stmt->get_result();
+            $result = $this->conn->query($sql);	
             $this->conn->close();
             return  $result ;
             
@@ -74,7 +71,6 @@
             $stmt->close();
         } 
 
-
         //UPDATE
         public function updateProduct(){
 
@@ -92,7 +88,6 @@
 
             // execute prepared statement
             $rc = mysqli_stmt_execute($stmt);
-
             $stmt->close();  
 
         }   
@@ -102,7 +97,6 @@
             $this->id = (int) $this->id;
             $stmt = mysqli_prepare($this->conn, "DELETE FROM " . $this->db_table . " WHERE id = ?");
             mysqli_stmt_bind_param($stmt, 'i', $this->id);
-            //$this->id = (int)strip_tags($this->id);
 
             // execute prepared statement
             mysqli_stmt_execute($stmt);

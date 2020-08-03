@@ -1,37 +1,34 @@
 <?php
 
-    spl_autoload_register(function ($className) {
-        require_once ('../classes/' . $className . '.class.php');
-    });
+spl_autoload_register(function ($className) {
+    require_once ('../classes/' . $className . '.class.php');
+});
 
-    use Database as db;
-    use Products as prod;
+use Database as db;
+use Products as prod;
 
-    $db = new db();
-    $conn = $db->getConnection();
-    $prod = new Products($conn);
+$db = new db();
+$conn = $db->getConnection();
+$prod = new Products($conn);
 
-    $stmt  = $prod->getaLLProducts();
-    while($row = $stmt->fetch_assoc()){
-        $newRow['category'][$row['cat_id']] = $row['category'];
-        $newRow['products'][$row['id']] = $row['name'];
-    }
+$stmt  = $prod->getaLLProducts();
+while($row = $stmt->fetch_assoc()){
+    $newRow['category'][$row['cat_id']] = $row['category'];
+    $newRow['products'][$row['id']] = $row['name'];
+}
 
-    $product =   "";
-    $actionForm = "create-product.php";
-    $valueButton = "Send";
-    $section = "New Product"; 
+$product =   "";
+$actionForm = "create-product.php";
+$valueButton = "Send";
+$section = "New Product"; 
 
-    if(isset($_GET['id'])){
-        $actionForm = "update-product.php";
-        $valueButton = "Update";
-        $section = "Update Product";
-        $product =   $newRow['products'][$_GET['id']];
+if(isset($_GET['id'])){
+    $actionForm = "update-product.php";
+    $valueButton = "Update";
+    $section = "Update Product";
+    $product =   $newRow['products'][$_GET['id']];
 
-    }
-
-    
-    
+}    
 ?>
 
 
