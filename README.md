@@ -26,10 +26,8 @@ OBS:
 - Teste unitário;
 
 ## Especificações do sistema
-Apache version 2.4.35
-No apache não foi instalado nenhuma extensão adicional
-Mysql version 5.7.23
-PHP version 7.2.10
-Composer version 1.10.7 >> Foi implementado o pacote "Monolog\Logger" em algumas paginas para gerarção de logs,
-na pagina "source/update-category.php" tem um exemplo 
-"https://packagist.org/packages/monolog/monolog".
+- Apache version 2.4.35;
+- No apache ;
+- Mysql version 5.7.23;
+- PHP version 7.2.10 não foi instalado nenhuma extensão adicional;
+Composer version 1.10.7 >> Foi implementado o pacote "Monolog\Logger" em algumas paginas para gerarção de logs, pacote usado: "https://packagist.org/packages/monolog/monolog".
