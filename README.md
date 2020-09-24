@@ -16,9 +16,7 @@ OBS:
 
 ## Forma de envio
 
-- Fazer fork do projeto;
-- Criar um branch com o seguinte nome "teste_php_NOME_SOBRENOME";
-- Fazer pull request para o branch "teste_php" do projeto de origem;
+Enviar o link do projeto no github para `ricardo.rocha@sodresantoro.com.br` e `ennio.simoes@sodresantoro.com.br`
 
 ## Diferenciais
 - Seguir as PSR's;
