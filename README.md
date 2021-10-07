@@ -22,3 +22,4 @@ Enviar o link do projeto no github para `ricardo.rocha@sodresantoro.com.br` e `e
 - Seguir as PSR's;
 - Utilizar composer;
 - Teste unitário;
+- Usar VueJS
